@@ -72,8 +72,9 @@ export const FallbackLauncherData: GithubReleasesType = {
 export const FreesmIssues: Array<{
   "Name"  : TranslationsKeyType;
   "Images": Array<{
-    "Link": string;
-    "Text": string;
+    "Link" : string;
+    "Text" : string;
+    "Ratio": number;
   }>;
   "Description": TranslationsKeyType;
 }> = [
@@ -81,8 +82,9 @@ export const FreesmIssues: Array<{
     "Name"  : "pages.faq.issues.long-launch.title",
     "Images": [
       {
-        "Link": "/issues/freesm-long-launch.webp",
-        "Text": "Long instance launch problem",
+        "Link" : "/issues/freesm-long-launch.webp",
+        "Text" : "Long instance launch problem",
+        "Ratio": 1009 / 626,
       },
     ],
     "Description": "pages.faq.issues.long-launch.description",
@@ -91,8 +93,9 @@ export const FreesmIssues: Array<{
     "Name"  : "pages.faq.issues.no-versions-available.title",
     "Images": [
       {
-        "Link": "/issues/freesm-no-available-versions.webp",
-        "Text": "No available versions problem",
+        "Link" : "/issues/freesm-no-available-versions.webp",
+        "Text" : "No available versions problem",
+        "Ratio": 1211 / 561,
       },
     ],
     "Description": "pages.faq.issues.no-versions-available.description",
@@ -101,8 +104,9 @@ export const FreesmIssues: Array<{
     "Name"  : "pages.faq.issues.portable-zip.title",
     "Images": [
       {
-        "Link": "/issues/freesm-java-checker.webp",
-        "Text": "Java checker problem",
+        "Link" : "/issues/freesm-java-checker.webp",
+        "Text" : "Java checker problem",
+        "Ratio": 667 / 539,
       },
     ],
     "Description": "pages.faq.issues.portable-zip.description",
@@ -121,8 +125,9 @@ export const FreesmIssues: Array<{
     "Name"  : "pages.faq.issues.microsoft-invalid-login.title",
     "Images": [
       {
-        "Link": "/issues/freesm-not-entitled.webp",
-        "Text": "Not entitled account problem",
+        "Link" : "/issues/freesm-not-entitled.webp",
+        "Text" : "Not entitled account problem",
+        "Ratio": 537 / 196,
       },
     ],
     "Description": "pages.faq.issues.microsoft-invalid-login.description",
@@ -131,11 +136,6 @@ export const FreesmIssues: Array<{
     "Name"       : "pages.faq.issues.no-languages.title",
     "Images"     : [],
     "Description": "pages.faq.issues.no-languages.description",
-  },
-  {
-    "Name"       : "pages.faq.issues.cat-pack-quality.title",
-    "Images"     : [],
-    "Description": "pages.faq.issues.cat-pack-quality.description",
   },
   {
     "Name"       : "pages.faq.issues.other.title",
