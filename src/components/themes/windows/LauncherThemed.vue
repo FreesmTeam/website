@@ -71,7 +71,7 @@ function getToolBarButtonBorderColor(name: string, buttonBorderless: boolean) {
 </script>
 
 <template>
-  <div class="h-full min-w-84 w-full flex flex-col border border-[#7a7a7a]">
+  <div class="h-full min-w-56 w-full flex flex-col border border-[#7a7a7a]">
     <div
       class="flex flex-nowrap items-center justify-between"
       :style="{
@@ -105,7 +105,7 @@ function getToolBarButtonBorderColor(name: string, buttonBorderless: boolean) {
           </div>
           <div
             v-if="button.name === 'Settings'"
-            class="absolute left-0 top-8 select-text p-1 text-nowrap text-xs leading-none"
+            class="absolute left-0 top-8 z-20 select-text p-1 text-nowrap text-xs leading-none"
             :style="{
               background: tooltipBase,
               color     : tooltipText,

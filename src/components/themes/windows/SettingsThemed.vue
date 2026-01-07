@@ -53,9 +53,12 @@ const itemsThemesSettings = [
 </script>
 
 <template>
-  <div class="h-fit min-w-84 w-full flex flex-nowrap border border-[#7a7a7a]">
+  <div
+    class="h-fit min-w-56 w-full flex flex-wrap border border-[#7a7a7a] sm:flex-nowrap"
+    :style="{ background: base }"
+  >
     <div
-      class="h-full flex flex-col sm:shrink-0"
+      class="h-fit flex flex-col sm:h-full sm:shrink-0"
       :style="{ background: base }"
     >
       <div
@@ -80,7 +83,7 @@ const itemsThemesSettings = [
       </div>
     </div>
     <div
-      class="h-full w-full flex flex-col gap-2 p-2"
+      class="h-fit sm:h-full w-full flex flex-col gap-2 p-2"
       :style="{ background: background }"
     >
       <div class="flex flex-nowrap items-center justify-between">
