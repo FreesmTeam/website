@@ -84,13 +84,13 @@ watchEffect(() => {
     ref="element"
     class="absolute z-5 h-fit max-w-320 w-full translate-x-0 transition-[opacity,transform] duration-50 ease-linear"
     :style="isReallySwiping ? {
-    transform: `translateX(${
-      direction === 'right'
-        ? Math.min(swipedDistance / 2, swipingLimit)
-        : Math.max(swipedDistance * -1 / 2, -1 * swipingLimit)
-    }px)`,
-    opacity: `${Math.max(10 / swipedDistance - 0.2, 0)}`,
-  } : {}"
+      transform: `translateX(${
+        direction === 'right'
+          ? Math.min(swipedDistance / 2, swipingLimit)
+          : Math.max(swipedDistance * -1 / 2, -1 * swipingLimit)
+      }px)`,
+      opacity: `${Math.max(10 / swipedDistance - 0.2, 0)}`,
+    } : {}"
   >
     <div class="relative z-5 bg-catppuccin-950 p-4">
       <slot />
