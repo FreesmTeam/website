@@ -58,7 +58,7 @@ const itemsThemesSettings = [
     :style="{ background: base }"
   >
     <div
-      class="h-fit flex flex-col sm:h-full sm:shrink-0"
+      class="h-fit w-full flex flex-col sm:h-full sm:w-fit sm:shrink-0"
       :style="{ background: base }"
     >
       <div
@@ -83,7 +83,7 @@ const itemsThemesSettings = [
       </div>
     </div>
     <div
-      class="h-fit sm:h-full w-full flex flex-col gap-2 p-2"
+      class="h-fit w-full flex flex-col gap-2 p-2 sm:h-full"
       :style="{ background: background }"
     >
       <div class="flex flex-nowrap items-center justify-between">
@@ -146,7 +146,7 @@ const itemsThemesSettings = [
             Instance view sorting mode
           </p>
           <div
-            class="grid cols-1 border rounded-sm px-2 py-3 sm:cols-2 border-[theme(colors.white/.1)]"
+            class="grid cols-1 gap-1 border rounded-sm px-2 py-3 sm:cols-2 border-[theme(colors.white/.1)]"
           >
             <div
               v-for="item in ['By last launched', 'By name']"
