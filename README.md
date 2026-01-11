@@ -35,6 +35,7 @@ If you want to add a new locale:
 
 ```shell
 git clone https://github.com/FreesmTeam/website
+cd website
 bun i
 bun dev
 ```
