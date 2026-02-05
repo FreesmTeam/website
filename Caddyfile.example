@@ -1,6 +1,9 @@
 new.freesmlauncher.org {
     root * /home/github/website/dist
     encode gzip
+
+    redir /telegram https://t.me/freesmteam
+
     try_files {path} /index.html
     file_server {
         hide .git
