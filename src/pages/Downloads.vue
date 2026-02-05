@@ -79,7 +79,7 @@ const { data, isPending } = useQuery({
 const releases = computed((): GithubReleasesType => {
   if (isPending.value || data.value === undefined) {
     return {
-      "Name"     : "Freesm Launcher Sequoia x.x.x",
+      "Name"     : "Freesm Launcher Maple x.x.x",
       "Downloads": FallbackLauncherData.Downloads,
     };
   }
