@@ -100,6 +100,11 @@ watchEffect(() => {
 });
 
 onAfterRouteLeave(() => {
+  // do not interfere with hash scrolling in common issues
+  if (location.hash !== "") {
+    return;
+  }
+
   // this is so messy
   setTimeout(() => {
     scrollTarget.value?.scrollTo?.({

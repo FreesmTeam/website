@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { FreesmIssues, TranslationsContextKey } from "@/constants/application.ts";
-import { inject, ref } from "vue";
+import { inject, onMounted, ref } from "vue";
 import Image from "@/components/base/Image.vue";
 import type { TranslationsReferenceType } from "@/types/translations-reference.type.ts";
 
@@ -21,12 +21,28 @@ function extractID(input: string): string {
   // return the '{issue}' part
   return parts.pop() ?? "unknown";
 }
+
+onMounted(() => {
+  const issueHash: string = location.hash;
+
+  if (issueHash === "") {
+    return;
+  }
+
+  const scrollElement: HTMLAnchorElement | null = document.querySelector(issueHash);
+
+  if (scrollElement === null) {
+    return;
+  }
+
+  scrollElement.scrollIntoView();
+});
 </script>
 
 <template>
   <div class="mx-auto my-12 max-w-240 flex flex-col gap-4 px-4">
     <template v-for="issue in FreesmIssues" :key="issue.Name">
-      <a :id="extractID(issue.Name)" :href="`#${extractID(issue.Name)}`" class="select-text text-xl text-white font-semibold before:absolute before:left-0 sm:text-3xl before:text-gray-300 before:opacity-0 before:transition-[opacity] before:content-['#'] hover:before:opacity-100">
+      <a :id="extractID(issue.Name)" :href="`#${extractID(issue.Name)}`" class="relative select-text text-xl text-white font-semibold before:absolute sm:text-3xl before:text-gray-300 before:opacity-0 before:transition-[opacity] before:content-['#'] before:-left-8 hover:before:opacity-100">
         {{ translations?.Messages?.[issue.Name] }}
       </a>
       <div
