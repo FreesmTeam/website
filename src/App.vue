@@ -125,6 +125,7 @@ onAfterRouteLeave(() => {
     <RouterView>
       <template #default="{ component }">
         <div
+          id="__scroll-target__workaround"
           ref="scrollTarget"
           :class="[
             'relative min-h-[calc(100svh-80px)] w-full flex justify-center overflow-x-hidden',

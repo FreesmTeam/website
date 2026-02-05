@@ -22,8 +22,8 @@ function extractID(input: string): string {
   return parts.pop() ?? "unknown";
 }
 
-onMounted(() => {
-  const issueHash: string = location.hash;
+function scrollIntoSection(hash?: string): void {
+  const issueHash: string = hash ?? location.hash;
 
   if (issueHash === "") {
     return;
@@ -35,14 +35,24 @@ onMounted(() => {
     return;
   }
 
-  scrollElement.scrollIntoView();
-});
+  document
+    .getElementById("__scroll-target__workaround")
+    ?.scrollTo?.({
+      "top": scrollElement.offsetTop,
+    });
+}
+
+onMounted(scrollIntoSection);
 </script>
 
 <template>
   <div class="mx-auto my-12 max-w-240 flex flex-col gap-4 px-4">
     <template v-for="issue in FreesmIssues" :key="issue.Name">
-      <a :id="extractID(issue.Name)" :href="`#${extractID(issue.Name)}`" class="relative select-text text-xl text-white font-semibold before:absolute sm:text-3xl before:text-gray-300 before:opacity-0 before:transition-[opacity] before:content-['#'] before:-left-8 hover:before:opacity-100">
+      <a
+        :id="extractID(issue.Name)"
+        :href="`#${extractID(issue.Name)}`"
+        class="relative select-text text-xl text-white font-semibold before:absolute sm:text-3xl before:text-gray-300 before:opacity-0 before:transition-[opacity] before:content-['#'] before:-left-8 hover:before:opacity-100"
+      >
         {{ translations?.Messages?.[issue.Name] }}
       </a>
       <div
