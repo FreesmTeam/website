@@ -15,6 +15,7 @@ freesmlauncher.org {
         redir /telegram https://t.me/freesmteam
         redir /discord https://discord.gg/6jjw4gjy4w
         redir /reddit https://www.reddit.com/r/FreesmLauncher
+        redir /successful-login https://old.freesmlauncher.org/successful-login
 
         try_files {path} /index.html
         file_server {
