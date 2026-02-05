@@ -12,7 +12,7 @@
         v-for="account in [
           { 'user': 'windstone_', 'type': 'MSA' },
           { 'user': 'TUYU', 'type': 'Offline' },
-          { 'user': 'Roxy', 'type': 'Ely.by' },
+          { 'user': 'Roxy Migurdia (Studio Bind)', 'type': 'Ely.by' },
         ]"
         :key="account.user"
         class="group flex flex-wrap justify-between gap-2"

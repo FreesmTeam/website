@@ -213,19 +213,19 @@ export const LauncherCatPacks: Array<{
   "Image": string;
 }> = [
   {
-    "Name" : "MiSide",
+    "Name" : "MiSide (AIHASTO)",
     "Image": "/assets/miside.webp",
   },
   {
-    "Name" : "Ame-chan",
+    "Name" : "Ame-chan (WSS Playground)",
     "Image": "/assets/ame-chan-low-opacity.webp",
   },
   {
-    "Name" : "Kita-chan (Animated)",
+    "Name" : "Kita-chan (CloverWorks)",
     "Image": "/assets/kita-chan.webp",
   },
   {
-    "Name" : "Plasma 6",
+    "Name" : "Plasma 6 (KDE e.V.)",
     "Image": "/assets/plasma-6-low-opacity.webp",
   },
   {
