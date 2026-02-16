@@ -188,6 +188,10 @@ export const TeamSocials: {
         "Link" : "https://github.com/mqsla",
         "Image": "https://avatars.githubusercontent.com/u/85938576?v=4",
       },
+      {
+        "Link" : "https://github.com/HowXu",
+        "Image": "https://avatars.githubusercontent.com/u/91002552?v=4",
+      },
     ],
   },
   "Special": {
