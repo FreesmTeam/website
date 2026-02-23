@@ -298,6 +298,12 @@ export const DownloadLinks: Array<{
         "Extra": "AUR",
       },
       {
+        "Icon" : "i-simple-icons-archlinux",
+        "Name" : "Arch (bin)",
+        "Link" : "https://aur.archlinux.org/packages/freesmlauncher-bin",
+        "Extra": "AUR",
+      },
+      {
         "Icon" : "i-simple-icons-debian",
         "Name" : "Debian",
         "Link" : "https://github.com/FreesmTeam/freesm-deb-pkgbuild",
