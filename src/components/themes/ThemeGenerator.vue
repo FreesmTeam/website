@@ -128,11 +128,7 @@ watchEffect(() => {
 
 <template>
   <div class="mx-auto my-12 max-w-240 flex flex-col gap-4 px-4">
-    <!-- @touch*.stop prevents mobile swipes -->
     <div
-      @touchstart.stop
-      @touchmove.stop
-      @touchend.stop
       class="relative w-full flex flex-wrap gap-0 overflow-x-auto rounded-md bg-catppuccin-900 sm:flex-nowrap"
     >
       <div class="flex shrink-0 gap-0 sm:flex-col">
