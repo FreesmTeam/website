@@ -59,16 +59,20 @@ const translations = inject<TranslationsReferenceType>(TranslationsContextKey);
       <p class="select-text py-2 text-xl text-white font-semibold sm:text-3xl">
         {{ translations?.Messages?.[TeamSocials.Special.Key] }}
       </p>
-      <a
-        :href="TeamSocials.Special.Entry.Link"
-        class="w-fit transition-[filter] hover:brightness-70"
-      >
-        <Image
-          class-names="h-12 w-12"
-          :src="TeamSocials.Special.Entry.Image"
-          alt="ElyPrismLauncher logo"
-        />
-      </a>
+      <div class="flex flex-wrap gap-4">
+        <a
+          v-for="entry in TeamSocials.Special.Entries"
+          :key="entry.Link"
+          :href="entry.Link"
+          class="w-fit flex items-center transition-[filter] hover:brightness-70"
+        >
+          <Image
+            :src="entry.Image"
+            :alt="`${entry.Label}'s logo`"
+            :style="{ height: `${entry.Height}px` }"
+          />
+        </a>
+      </div>
     </div>
   </div>
 </template>
