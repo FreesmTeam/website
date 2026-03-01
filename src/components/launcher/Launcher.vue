@@ -75,16 +75,18 @@ provide<ContextLauncherType>(LauncherContextKey, {
         'w-full rounded-md drop-shadow-[0_25px_25px_rgba(0,0,0,0.5)] box-border',
         'border-2 border-transparent transition duration-300',
         maximized
-          ? '!w-auto fixed top-4 left-4 right-4 z-[6000] select-none'
+          ? '!w-auto fixed top-4 bottom-4 left-4 right-4 z-[6000] select-none'
           : 'relative',
       ]"
     >
-      <DesktopWrapper v-if="minimized" :open="unMinimize" />
-      <div :class="['flex flex-col gap-0', minimized && 'invisible']">
+      <KeepAlive>
+        <DesktopWrapper v-if="minimized" :open="unMinimize" />
+      </KeepAlive>
+      <div :class="['flex flex-col gap-0', minimized && 'invisible', maximized && 'h-full']">
         <WindowsHeader :context-key="LauncherContextKey" v-if="platform === 'Windows'" />
         <MacHeader :context-key="LauncherContextKey" v-else-if="platform === 'macOS'" />
         <LinuxHeader :context-key="LauncherContextKey" v-else />
-        <div class="w-full flex flex-col gap-0">
+        <div :class="['w-full flex flex-col gap-0', maximized && 'h-full']">
           <MenuBar
             :bar-states="barStates"
             :toggle-news="() => barStates.news = !barStates.news"
