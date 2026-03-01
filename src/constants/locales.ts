@@ -1,10 +1,22 @@
 import type { LocaleType } from "@/types/locale.type.ts";
 
 /*
- * This file contains the list of supported locales and their corresponding information.
- * They are ordered based on the number of speakers worldwide, remember to follow this order when adding new locales.
+ * A list of locales that have translations
  */
-export const Locales = ["en", "es", "ru", "pl", "fa", "ua"] as const;
+export const Locales = [
+  // These three locales should stay in this ordering
+  "en",
+  "ru",
+  "ua",
+  // The ordering of the next locales is based on the number of speakers worldwide
+  "es",
+  "pl",
+  "fa",
+] as const;
+
+/*
+ * An object with the necessary information about locales (for pre-fetching)
+ */
 export const ExtraInfo: Record<LocaleType, {
   "Name": string;
   "Flag": string;
@@ -13,13 +25,17 @@ export const ExtraInfo: Record<LocaleType, {
     "Name": "English",
     "Flag": "\uD83C\uDDEC\uD83C\uDDE7",
   },
-  "es": {
-    "Name": "Español",
-    "Flag": "\uD83C\uDDEA\uD83C\uDDF8",
-  },
   "ru": {
     "Name": "Русский",
     "Flag": "\uD83C\uDDF7\uD83C\uDDFA",
+  },
+  "ua": {
+    "Name": "Українська",
+    "Flag": "\uD83C\uDDFA\uD83C\uDDE6",
+  },
+  "es": {
+    "Name": "Español",
+    "Flag": "\uD83C\uDDEA\uD83C\uDDF8",
   },
   "pl": {
     "Name": "Polski",
@@ -28,9 +44,5 @@ export const ExtraInfo: Record<LocaleType, {
   "fa": {
     "Name": "فارسی",
     "Flag": "\uD83C\uDDEE\uD83C\uDDF7",
-  },
-  "ua": {
-    "Name": "Українська",
-    "Flag": "\uD83C\uDDFA\uD83C\uDDE6",
   },
 };

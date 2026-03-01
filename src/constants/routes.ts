@@ -105,11 +105,13 @@ export const TeamSocials: {
     }>;
   };
   "Special": {
-    "Key"  : TranslationsKeyType;
-    "Entry": {
-      "Link" : string;
-      "Image": string;
-    };
+    "Key"    : TranslationsKeyType;
+    "Entries": Array<{
+      "Link"  : string;
+      "Image" : string;
+      "Label" : string;
+      "Height": number;
+    }>;
   };
 } = {
   "Maintainers": {
@@ -153,32 +155,28 @@ export const TeamSocials: {
         "Image": "https://avatars.githubusercontent.com/u/76707795?v=4",
       },
       {
+        "Link" : "https://github.com/HowXu",
+        "Image": "https://avatars.githubusercontent.com/u/91002552?v=4",
+      },
+      {
+        "Link" : "https://github.com/LunisCandle",
+        "Image": "https://avatars.githubusercontent.com/u/93695520?v=4",
+      },
+      {
+        "Link" : "https://github.com/MiguVT/",
+        "Image": "https://avatars.githubusercontent.com/u/71216796?v=4",
+      },
+      {
         "Link" : "https://github.com/qEniuu/",
         "Image": "https://avatars.githubusercontent.com/u/95589434?v=4",
       },
       {
-        "Link" : "https://github.com/FoxyChipher",
-        "Image": "https://avatars.githubusercontent.com/u/75834304?v=4",
-      },
-      {
-        "Link" : "https://github.com/SophrTemin/",
-        "Image": "/deleted-avatar.webp",
-      },
-      {
-        "Link" : "https://github.com/sn1pp",
-        "Image": "https://avatars.githubusercontent.com/u/79652963?v=4",
+        "Link" : "https://github.com/Impqxr/",
+        "Image": "https://avatars.githubusercontent.com/u/70816395?v=4",
       },
       {
         "Link" : "https://github.com/viceversa03",
         "Image": "https://avatars.githubusercontent.com/u/109146971?v=4",
-      },
-      {
-        "Link" : "https://github.com/ventureoo",
-        "Image": "https://avatars.githubusercontent.com/u/92667539?v=4",
-      },
-      {
-        "Link" : "https://t.me/chaoticbraincat",
-        "Image": "/brainfluid.webp",
       },
       {
         "Link" : "https://github.com/Azarakash",
@@ -189,17 +187,44 @@ export const TeamSocials: {
         "Image": "https://avatars.githubusercontent.com/u/85938576?v=4",
       },
       {
-        "Link" : "https://github.com/HowXu",
-        "Image": "https://avatars.githubusercontent.com/u/91002552?v=4",
+        "Link" : "https://github.com/FoxyChipher",
+        "Image": "https://avatars.githubusercontent.com/u/75834304?v=4",
+      },
+      {
+        "Link" : "https://github.com/SophrTemin/",
+        "Image": "/deleted-avatar.webp",
+      },
+      {
+        "Link" : "https://github.com/ventureoo",
+        "Image": "https://avatars.githubusercontent.com/u/92667539?v=4",
+      },
+      {
+        "Link" : "https://t.me/chaoticbraincat",
+        "Image": "/brainfluid.webp",
+      },
+      {
+        "Link" : "https://github.com/sn1pp",
+        "Image": "https://avatars.githubusercontent.com/u/79652963?v=4",
       },
     ],
   },
   "Special": {
-    "Key"  : "pages.home.team.special.title",
-    "Entry": {
-      "Link" : "https://elyprismlauncher.github.io/",
-      "Image": "https://elyprismlauncher.github.io/assets/svg/org.prismlauncher.PrismLauncher.svg",
-    },
+    "Key"    : "pages.home.team.special.title",
+    "Entries": [
+      {
+        "Link"  : "https://elyprismlauncher.github.io/",
+        "Image" : "https://raw.githubusercontent.com/ElyPrismLauncher/ElyPrismLauncher/develop/program_info/io.github.elyprismlauncher.ElyPrismLauncher.logo-darkmode.svg",
+        "Label" : "ElyPrismLauncher",
+        "Height": 48,
+      },
+      {
+        "Link"  : "https://github.com/Noctilune/ShatteredPrism",
+        "Image" : "https://raw.githubusercontent.com/Noctilune/ShatteredPrism/develop/program_info/shatteredprism-header.svg",
+        "Label" : "ShatteredPrism",
+        // The empty spacing is bigger in ShatteredPrism logo than the ElyPrismLauncher one, so we use another value
+        "Height": 64,
+      },
+    ],
   },
 };
 
