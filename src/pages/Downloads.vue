@@ -47,7 +47,7 @@ const { data, isPending } = useQuery({
       [RuntimeDownloadLink.AppImage, ".appimage"],
       [RuntimeDownloadLink.Qt5Linux, "linux-qt5"],
       [RuntimeDownloadLink.Qt6Linux, "linux-qt6"],
-      [RuntimeDownloadLink.macOS, "macos-sequoia"],
+      [RuntimeDownloadLink.macOS, "macos"],
       [RuntimeDownloadLink.SetupMSVCX86, "msvc-setup"],
       [RuntimeDownloadLink.SetupMinGW, "mingw-w64-setup"],
       [RuntimeDownloadLink.SetupMSVCARM, "msvc-arm64-setup"],
