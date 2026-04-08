@@ -125,13 +125,6 @@ export const TeamSocials: {
         "Description": "pages.home.team.maintainers.list.so5iso4ka.description",
       },
       {
-        "Name"       : "kaeeraa",
-        "Link"       : "https://github.com/kaeeraa/",
-        "Badge"      : "master-of-all-trades",
-        "Image"      : "https://avatars.githubusercontent.com/u/99148867?v=4",
-        "Description": "pages.home.team.maintainers.list.kaeeraa.description",
-      },
-      {
         "Name"       : "s0me1newithhand7s",
         "Link"       : "https://github.com/s0me1newithhand7s",
         "Badge"      : "creator",
