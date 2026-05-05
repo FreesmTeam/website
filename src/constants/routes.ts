@@ -196,8 +196,16 @@ export const TeamSocials: {
         "Image": "/brainfluid.webp",
       },
       {
+        "Link" : "https://guns.lol/matveyka",
+        "Image": "/matveyka.webp",
+      },
+      {
         "Link" : "https://github.com/sn1pp",
         "Image": "https://avatars.githubusercontent.com/u/79652963?v=4",
+      },
+      {
+        "Link" : "https://www.chess.com/member/fonaxchess",
+        "Image": "/fonaxx.webp",
       },
     ],
   },
