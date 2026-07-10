@@ -20,10 +20,12 @@ document
 
 const translations = inject<TranslationsReferenceType>(TranslationsContextKey);
 
-const { data, isPending } = useQuery({
+
+
+const { data, isPending, error, failureCount } = useQuery({
   "queryKey": ["github", "repository", "freesmlauncher"],
   "queryFn" : async (): Promise<GithubReleasesType> => {
-    const response = await fetch("https://api.github.com/repos/freesmteam/freesmlauncher/releases/latest");
+    const response = await fetch("https://api.github.com/repos/freesmteam/freesmlauncher/releases/latestd");
     const repository: unknown = await response.json();
 
     if (
@@ -34,7 +36,7 @@ const { data, isPending } = useQuery({
       !("assets" in repository) ||
       !Array.isArray(repository.assets)
     ) {
-      return FallbackLauncherData;
+      throw new Error("The returned data from GitHub seems to be invalid");
     }
 
     const actualDownloads: Record<GithubReleaseLinkType, string> = {
@@ -42,10 +44,7 @@ const { data, isPending } = useQuery({
     };
     const artifactChecks = [
       // first argument is an object field to assign, and the second is a string to look for in artifact's name
-      [RuntimeDownloadLink.FlatpakARM, "flatpak-aarch64"],
-      [RuntimeDownloadLink.FlatpakX86, "flatpak-x86_64"],
       [RuntimeDownloadLink.AppImage, ".appimage"],
-      [RuntimeDownloadLink.Qt5Linux, "linux-qt5"],
       [RuntimeDownloadLink.Qt6Linux, "linux-qt6"],
       [RuntimeDownloadLink.macOS, "macos"],
       [RuntimeDownloadLink.SetupMSVCX86, "msvc-setup"],
@@ -59,7 +58,7 @@ const { data, isPending } = useQuery({
     for (const artifact of repository?.assets) {
       const artifactName: string = artifact?.name?.toLowerCase?.() ?? "";
       // artifact link should always be defined, but show a placeholder if it's not the case
-      const artifactLink: string = artifact?.["browser_download_url"] ?? RuntimeDownloadLink.FlatpakARM;
+      const artifactLink: string = artifact?.["browser_download_url"] ?? FallbackLauncherData.Releases;
 
       for (const [fieldToAssign, namePart] of artifactChecks) {
         if (artifactName.includes(namePart) && !artifactName.endsWith(".zsync")) {
@@ -95,9 +94,23 @@ const releases = computed((): GithubReleasesType => {
         {{ translations?.Messages?.["pages.downloads.title"] }}
       </p>
       <p class="text-right-to-left select-text text-center text-balance text-lg text-gray-400 sm:text-2xl">
-        {{ translations?.Messages?.["pages.downloads.description"]?.replace?.("%s", releases.Name) }}
+        <span v-if="failureCount > 0">
+          Fetching failed {{ failureCount }} times.
+        </span>
+        <span v-if="error !== null" class="text-red-400">
+          Error: {{ error?.message }}.
+        </span>
+        {{
+          error === null
+            ? translations?.Messages?.["pages.downloads.description"]?.replace?.("%s", releases.Name)
+            : ""
+        }}
+        <span
+          v-if="error !== null"
+          v-html="FallbackLauncherData.Name"
+        ></span>
       </p>
     </div>
-    <DownloadLinks :data="data" :is-pending="isPending" />
+    <DownloadLinks :data="data ?? releases" :is-pending="isPending" />
   </Page>
 </template>

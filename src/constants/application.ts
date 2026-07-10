@@ -52,20 +52,19 @@ export const FeaturesSection: Array<{
 ];
 
 export const FallbackLauncherData: GithubReleasesType = {
-  "Name"     : "Freesm Launcher Sequoia 1.4.2",
+  "Name": "Since an error has occurred, here are fallback links to Freesm Launcher Maple 2.2.1." + " " +
+    "For the latest version, please visit <a class=\"underline\" target=\"_blank\" href=\"https://github.com/FreesmTeam/FreesmLauncher/releases\">GitHub</a>",
+  "Releases" : "https://github.com/FreesmTeam/FreesmLauncher/releases",
   "Downloads": {
-    "runtime-flatpak-arm"      : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Linux-6d80511-Flatpak-aarch64.flatpak.zip",
-    "runtime-flatpak-x86"      : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Linux-6d80511-Flatpak-x86_64.flatpak.zip",
-    "runtime-qt5-linux"        : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Linux-Qt5-Portable-sequoia-1.4.2.tar.gz",
-    "runtime-qt6-linux"        : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Linux-Qt6-Portable-sequoia-1.4.2.tar.gz",
-    "runtime-app-image"        : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Linux-x86_64.AppImage",
-    "runtime-macos"            : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-macOS-sequoia-1.4.2.zip",
-    "runtime-setup-msvc-x86"   : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Windows-MSVC-Setup-sequoia-1.4.2.exe",
-    "runtime-setup-mingw"      : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Windows-MinGW-w64-Setup-sequoia-1.4.2.exe",
-    "runtime-setup-msvc-arm"   : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Windows-MSVC-arm64-Setup-sequoia-1.4.2.exe",
-    "runtime-portable-msvc-x86": "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Windows-MSVC-Portable-sequoia-1.4.2.zip",
-    "runtime-portable-mingw"   : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Windows-MinGW-w64-Portable-sequoia-1.4.2.zip",
-    "runtime-portable-msvc-arm": "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.2/FreesmLauncher-Windows-MSVC-arm64-Portable-sequoia-1.4.2.zip",
+    "runtime-qt6-linux"        : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/2.2.1/FreesmLauncher-Linux-Qt6-Portable-2.2.1.tar.gz",
+    "runtime-app-image"        : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/2.2.1/FreesmLauncher-Linux-x86_64.AppImage",
+    "runtime-macos"            : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/2.2.1/FreesmLauncher-macOS-2.2.1.zip",
+    "runtime-setup-msvc-x86"   : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/2.2.1/FreesmLauncher-Windows-MSVC-Setup-2.2.1.exe",
+    "runtime-setup-mingw"      : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/2.2.1/FreesmLauncher-Windows-MinGW-w64-Setup-2.2.1.exe",
+    "runtime-setup-msvc-arm"   : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/2.2.1/FreesmLauncher-Windows-MSVC-arm64-Setup-2.2.1.exe",
+    "runtime-portable-msvc-x86": "https://github.com/FreesmTeam/FreesmLauncher/releases/download/2.2.1/FreesmLauncher-Windows-MSVC-Portable-2.2.1.zip",
+    "runtime-portable-mingw"   : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/2.2.1/FreesmLauncher-Windows-MinGW-w64-Portable-2.2.1.zip",
+    "runtime-portable-msvc-arm": "https://github.com/FreesmTeam/FreesmLauncher/releases/download/2.2.1/FreesmLauncher-Windows-MSVC-arm64-Setup-2.2.1.exe",
   },
 };
 

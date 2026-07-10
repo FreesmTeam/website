@@ -245,10 +245,7 @@ export const ExternalLinks = [
 ] as const;
 
 export const RuntimeDownloadLink = {
-  "FlatpakARM"     : "runtime-flatpak-arm",
-  "FlatpakX86"     : "runtime-flatpak-x86",
   "AppImage"       : "runtime-app-image",
-  "Qt5Linux"       : "runtime-qt5-linux",
   "Qt6Linux"       : "runtime-qt6-linux",
   "macOS"          : "runtime-macos",
   "PortableMSVCARM": "runtime-portable-msvc-arm",
@@ -338,20 +335,14 @@ export const DownloadLinks: Array<{
       {
         "Icon" : "i-simple-icons-flatpak",
         "Name" : "Flatpak",
-        "Link" : RuntimeDownloadLink.FlatpakARM,
-        "Extra": ".zip, aarch64",
-      },
-      {
-        "Icon" : "i-simple-icons-flatpak",
-        "Name" : "Flatpak",
-        "Link" : RuntimeDownloadLink.FlatpakX86,
-        "Extra": ".zip, x86_64",
+        "Link" : "https://github.com/FreesmTeam/flatpak",
+        "Extra": ".flatpakrepo",
       },
       {
         "Icon" : "i-simple-icons-linux",
         "Name" : "Portable Qt5",
-        "Link" : RuntimeDownloadLink.Qt5Linux,
-        "Extra": ".tar.gz",
+        "Link" : "https://github.com/FreesmTeam/FreesmLauncher/releases/download/sequoia-1.4.4/FreesmLauncher-Linux-Qt5-Portable-sequoia-1.4.4.tar.gz",
+        "Extra": ".tar.gz (Freesm 1.4.4)",
       },
       {
         "Icon" : "i-simple-icons-linux",
@@ -369,7 +360,7 @@ export const DownloadLinks: Array<{
         "Icon" : "i-simple-icons-gentoo",
         "Name" : "Gentoo",
         "Link" : "https://github.com/FreesmTeam/freesmlauncher-overlay",
-        "Extra": "EBuild Overlay (archived)",
+        "Extra": "EBuild Overlay (unmaintained)",
       },
     ],
   },
