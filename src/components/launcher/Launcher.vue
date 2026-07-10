@@ -76,7 +76,7 @@ provide<ContextLauncherType>(LauncherContextKey, {
         'border-2 border-transparent transition duration-300',
         maximized
           ? '!w-auto fixed top-4 bottom-4 left-4 right-4 z-[6000] select-none'
-          : 'relative',
+          : 'relative z-10',
       ]"
     >
       <KeepAlive>
