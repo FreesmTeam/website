@@ -25,7 +25,7 @@ const translations = inject<TranslationsReferenceType>(TranslationsContextKey);
 const { data, isPending, error, failureCount } = useQuery({
   "queryKey": ["github", "repository", "freesmlauncher"],
   "queryFn" : async (): Promise<GithubReleasesType> => {
-    const response = await fetch("https://api.github.com/repos/freesmteam/freesmlauncher/releases/latestd");
+    const response = await fetch("https://api.github.com/repos/freesmteam/freesmlauncher/releases/latest");
     const repository: unknown = await response.json();
 
     if (
