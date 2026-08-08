@@ -75,7 +75,7 @@ export const Socials = {
   "Github": {
     "Home"      : "https://github.com/FreesmTeam/FreesmLauncher",
     "Issues"    : "https://github.com/FreesmTeam/FreesmLauncher/issues",
-    "Contribute": "https://github.com/FreesmTeam/FreesmLauncher/blob/develop/CONTRIBUTING.md",
+    "Contribute": "https://github.com/FreesmTeam/FreesmLauncher/blob/develop/docs/CONTRIBUTING.md",
     "Website"   : "https://github.com/FreesmTeam/website",
   },
   "Discord": {
