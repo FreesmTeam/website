@@ -192,6 +192,14 @@ export const TeamSocials: {
         "Image": "https://avatars.githubusercontent.com/u/92667539?v=4",
       },
       {
+        "Link" : "https://github.com/makuraslvt",
+        "Image": "https://avatars.githubusercontent.com/u/95250141?v=4",
+      },
+      {
+        "Link" : "https://github.com/CiccioBro17",
+        "Image": "https://avatars.githubusercontent.com/u/203853964?v=4",
+      },
+      {
         "Link" : "https://t.me/chaoticbraincat",
         "Image": "/brainfluid.webp",
       },
