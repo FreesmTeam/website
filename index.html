@@ -21,6 +21,31 @@
     <meta name="twitter:image" content="/banner.webp">
     <meta name="theme-color" content="#cba6f7" />
     <link rel="icon" href="/favicon.ico" />
+    <style>
+      /* Initial UI styles */
+      @media (width < 640px) {
+        #__initial-header {
+          display: none !important;
+        }
+        #__initial-bottom-bar {
+          display: flex !important;
+        }
+      }
+      @media (width < 768px) {
+        .__initial-header-nav__link {
+          display: none !important;
+        }
+        #__initial-header-row {
+          gap: 8px !important;
+        }
+        #__initial-header-nav {
+          gap: 8px !important;
+        }
+        #__initial-header-nav__last-element {
+          padding-right: 4px !important;
+        }
+      }
+    </style>
   </head>
   <body style="margin:0;background:#09090e;color:white">
     <div id="app" class="select-none">
