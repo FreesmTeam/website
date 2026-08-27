@@ -15,10 +15,8 @@
     <meta property="og:site_name" content="Freesm Launcher">
     <meta property="og:image" content="/banner.webp">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Freesm Launcher">
-    <meta name="twitter:description" content="A Prism Launcher fork aimed to provide a free way to play Minecraft.">
-    <meta name="twitter:image" content="/banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#cba6f7" />
     <link rel="icon" href="/favicon.ico" />
     <style>
       /* Initial UI styles */
@@ -45,89 +43,6 @@
         }
       }
     </style>
-    <script>
-      /* Per-route metadata */
-      switch (location?.pathname) {
-        case "/downloads": {
-          const title = "Downloads - Freesm Launcher";
-          const description = "Download Freesm Launcher for your platform for free, no ads, no viruses, no SMS, no registration, no calls, no glowies. Or don't do it, it's up to you!";
-
-          document.title = title;
-          document
-            ?.querySelector?.('meta[name="description"]')
-            ?.setAttribute?.(
-              "content",
-              description,
-            );
-          document
-            ?.querySelector?.('meta[property="og:description"]')
-            ?.setAttribute?.(
-              "content",
-              description,
-            );
-          document
-            ?.querySelector?.('meta[name="twitter:description"]')
-            ?.setAttribute?.(
-              "content",
-              description,
-            );
-
-          break;
-        }
-        case "/faq": {
-          const title = "FAQ - Freesm Launcher";
-          const description = "A collection of helpful information for frequent problems when using Freesm Launcher.";
-
-          document.title = title;
-          document
-            ?.querySelector?.('meta[name="description"]')
-            ?.setAttribute?.(
-            "content",
-            description,
-          );
-          document
-            ?.querySelector?.('meta[property="og:description"]')
-            ?.setAttribute?.(
-            "content",
-            description,
-          );
-          document
-            ?.querySelector?.('meta[name="twitter:description"]')
-            ?.setAttribute?.(
-            "content",
-            description,
-          );
-
-          break;
-        }
-        case "/themes": {
-          const title = "Themes - Freesm Launcher";
-          const description = "Easily create and preview your Freesm Launcher theme in real-time.";
-
-          document.title = title;
-          document
-            ?.querySelector?.('meta[name="description"]')
-            ?.setAttribute?.(
-            "content",
-            description,
-          );
-          document
-            ?.querySelector?.('meta[property="og:description"]')
-            ?.setAttribute?.(
-            "content",
-            description,
-          );
-          document
-            ?.querySelector?.('meta[name="twitter:description"]')
-            ?.setAttribute?.(
-            "content",
-            description,
-          );
-
-          break;
-        }
-      }
-    </script>
   </head>
   <body style="margin:0;background:#09090e;color:white">
     <div id="app" class="select-none">
