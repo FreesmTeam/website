@@ -204,7 +204,7 @@ export const TeamSocials: {
         "Image": "/brainfluid.webp",
       },
       {
-        "Link" : "https://guns.lol/matveyka",
+        "Link" : "https://notmtvk.pro",
         "Image": "/matveyka.webp",
       },
       {
