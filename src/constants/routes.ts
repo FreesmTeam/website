@@ -192,8 +192,8 @@ export const TeamSocials: {
         "Image": "https://avatars.githubusercontent.com/u/92667539?v=4",
       },
       {
-        "Link" : "https://github.com/makuraslvt",
-        "Image": "https://avatars.githubusercontent.com/u/95250141?v=4",
+        "Link" : "https://makura.su",
+        "Image": "https://libravatar.org/avatar/00d5ea6fa6289f327137b6077d363930",
       },
       {
         "Link" : "https://github.com/CiccioBro17",
