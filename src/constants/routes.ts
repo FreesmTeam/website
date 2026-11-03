@@ -221,8 +221,8 @@ export const TeamSocials: {
     "Key"    : "pages.home.team.special.title",
     "Entries": [
       {
-        "Link"  : "https://elyprismlauncher.github.io/",
-        "Image" : "https://raw.githubusercontent.com/mctaylors/ElyPrismLauncher/refs/heads/develop/program_info/ru.pineconemc.launcher.logo-darkmode.svg",
+        "Link"  : "https://pineconemc.ru",
+        "Image" : "https://pineconemc.ru/assets/svg/logo-darkmode.svg",
         "Label" : "PineconeMC",
         "Height": 48,
       },
