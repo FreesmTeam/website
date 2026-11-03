@@ -1,3 +1,4 @@
+
 import type { LocaleType } from "@/types/locale.type.ts";
 
 /*
@@ -12,6 +13,7 @@ export const Locales = [
   "es",
   "pl",
   "fa",
+  "id",
 ] as const;
 
 /*
@@ -45,4 +47,9 @@ export const ExtraInfo: Record<LocaleType, {
     "Name": "فارسی",
     "Flag": "\uD83C\uDDEE\uD83C\uDDF7",
   },
+  "id": {
+    "Name": "Indonesia",
+    "Flag": "\uD83C\uDDEE\uD83C\uDDE9",
+  },
 };
+
